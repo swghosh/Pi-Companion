@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		C856BAC91F362ADF007ABC26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C856BAC81F362ADF007ABC26 /* AppDelegate.swift */; };
-		C856BACB1F362ADF007ABC26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C856BACA1F362ADF007ABC26 /* ViewController.swift */; };
+		C856BACB1F362ADF007ABC26 /* ControlsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C856BACA1F362ADF007ABC26 /* ControlsViewController.swift */; };
 		C856BACE1F362ADF007ABC26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C856BACC1F362ADF007ABC26 /* Main.storyboard */; };
 		C856BAD01F362ADF007ABC26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C856BACF1F362ADF007ABC26 /* Assets.xcassets */; };
 		C856BAD31F362ADF007ABC26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C856BAD11F362ADF007ABC26 /* LaunchScreen.storyboard */; };
+		C885177020040C69003E4698 /* StatusAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C885176F20040C69003E4698 /* StatusAPICall.swift */; };
+		C885177220040F84003E4698 /* EquipmentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C885177120040F84003E4698 /* EquipmentItem.swift */; };
+		C8C0FE911F36FBD500734924 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C0FE901F36FBD500734924 /* SwitchTableViewCell.swift */; };
+		C8EA3FCC1FFFFDC1007B6A8E /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EA3FCB1FFFFDC1007B6A8E /* APICall.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C856BAC51F362ADF007ABC26 /* Pi Companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pi Companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C856BAC81F362ADF007ABC26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C856BACA1F362ADF007ABC26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C856BACA1F362ADF007ABC26 /* ControlsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsViewController.swift; sourceTree = "<group>"; };
 		C856BACD1F362ADF007ABC26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C856BACF1F362ADF007ABC26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C856BAD21F362ADF007ABC26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C856BAD41F362ADF007ABC26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C885176F20040C69003E4698 /* StatusAPICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusAPICall.swift; sourceTree = "<group>"; };
+		C885177120040F84003E4698 /* EquipmentItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentItem.swift; sourceTree = "<group>"; };
+		C8C0FE901F36FBD500734924 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		C8EA3FCB1FFFFDC1007B6A8E /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +63,12 @@
 			isa = PBXGroup;
 			children = (
 				C856BAC81F362ADF007ABC26 /* AppDelegate.swift */,
-				C856BACA1F362ADF007ABC26 /* ViewController.swift */,
+				C856BACA1F362ADF007ABC26 /* ControlsViewController.swift */,
 				C856BACC1F362ADF007ABC26 /* Main.storyboard */,
+				C885176F20040C69003E4698 /* StatusAPICall.swift */,
+				C8EA3FCB1FFFFDC1007B6A8E /* APICall.swift */,
+				C885177120040F84003E4698 /* EquipmentItem.swift */,
+				C8C0FE901F36FBD500734924 /* SwitchTableViewCell.swift */,
 				C856BACF1F362ADF007ABC26 /* Assets.xcassets */,
 				C856BAD11F362ADF007ABC26 /* LaunchScreen.storyboard */,
 				C856BAD41F362ADF007ABC26 /* Info.plist */,
@@ -91,12 +103,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "SwG Ghosh";
 				TargetAttributes = {
 					C856BAC41F362ADF007ABC26 = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = 687NW7TG3Z;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -137,8 +150,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C856BACB1F362ADF007ABC26 /* ViewController.swift in Sources */,
+				C885177020040C69003E4698 /* StatusAPICall.swift in Sources */,
+				C885177220040F84003E4698 /* EquipmentItem.swift in Sources */,
+				C856BACB1F362ADF007ABC26 /* ControlsViewController.swift in Sources */,
 				C856BAC91F362ADF007ABC26 /* AppDelegate.swift in Sources */,
+				C8EA3FCC1FFFFDC1007B6A8E /* APICall.swift in Sources */,
+				C8C0FE911F36FBD500734924 /* SwitchTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,7 +191,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -182,7 +201,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -211,6 +234,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -225,7 +249,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -233,7 +259,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -254,6 +284,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -268,7 +299,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cf.codecrafts.Pi-Companion";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -281,7 +313,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cf.codecrafts.Pi-Companion";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -304,6 +337,7 @@
 				C856BAD91F362ADF007ABC26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
