@@ -13,9 +13,7 @@ class APICall {
     var jsonData: Data? = nil
     var finished: Bool = false
     
-    var asyncCompletionHandler = { () -> Void in
-        print("POST ASYNC TASK CALLED")
-    }
+    var onCompleteAsyncTask: (() -> Void)?
     
     init(urlString: String, apiKey: String) {
         self.url = URL(string: "\(urlString)?key=\(apiKey)")
@@ -34,7 +32,7 @@ class APICall {
             self.jsonData = data
             self.finished = true
             
-            self.asyncCompletionHandler()
+            self.onCompleteAsyncTask?()
         })
         apiTask.resume()
     }

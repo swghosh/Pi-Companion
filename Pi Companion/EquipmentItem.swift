@@ -7,11 +7,11 @@
 //
 
 class EquipmentItem {
-    var status: Bool
-    var identifier: Character
+    var channelPowerStatus: Bool
+    var channelIdentifier: Character
     
-    init(identifier: Character, status: Bool) {
-        self.identifier = identifier
-        self.status = status
+    init(channelIdentifier: Character, channelPowerStatus: Bool) {
+        self.channelIdentifier = channelIdentifier
+        self.channelPowerStatus = channelPowerStatus
     }
 }

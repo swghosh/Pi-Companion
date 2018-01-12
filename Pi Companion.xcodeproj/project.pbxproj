@@ -12,7 +12,7 @@
 		C856BACE1F362ADF007ABC26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C856BACC1F362ADF007ABC26 /* Main.storyboard */; };
 		C856BAD01F362ADF007ABC26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C856BACF1F362ADF007ABC26 /* Assets.xcassets */; };
 		C856BAD31F362ADF007ABC26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C856BAD11F362ADF007ABC26 /* LaunchScreen.storyboard */; };
-		C885177020040C69003E4698 /* StatusAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C885176F20040C69003E4698 /* StatusAPICall.swift */; };
+		C885177020040C69003E4698 /* EquipmentsStatusAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C885176F20040C69003E4698 /* EquipmentsStatusAPICall.swift */; };
 		C885177220040F84003E4698 /* EquipmentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C885177120040F84003E4698 /* EquipmentItem.swift */; };
 		C8C0FE911F36FBD500734924 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C0FE901F36FBD500734924 /* SwitchTableViewCell.swift */; };
 		C8EA3FCC1FFFFDC1007B6A8E /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EA3FCB1FFFFDC1007B6A8E /* APICall.swift */; };
@@ -26,7 +26,7 @@
 		C856BACF1F362ADF007ABC26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C856BAD21F362ADF007ABC26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C856BAD41F362ADF007ABC26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C885176F20040C69003E4698 /* StatusAPICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusAPICall.swift; sourceTree = "<group>"; };
+		C885176F20040C69003E4698 /* EquipmentsStatusAPICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentsStatusAPICall.swift; sourceTree = "<group>"; };
 		C885177120040F84003E4698 /* EquipmentItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentItem.swift; sourceTree = "<group>"; };
 		C8C0FE901F36FBD500734924 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		C8EA3FCB1FFFFDC1007B6A8E /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 				C856BAC81F362ADF007ABC26 /* AppDelegate.swift */,
 				C856BACA1F362ADF007ABC26 /* ControlsViewController.swift */,
 				C856BACC1F362ADF007ABC26 /* Main.storyboard */,
-				C885176F20040C69003E4698 /* StatusAPICall.swift */,
+				C885176F20040C69003E4698 /* EquipmentsStatusAPICall.swift */,
 				C8EA3FCB1FFFFDC1007B6A8E /* APICall.swift */,
 				C885177120040F84003E4698 /* EquipmentItem.swift */,
 				C8C0FE901F36FBD500734924 /* SwitchTableViewCell.swift */,
@@ -150,7 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C885177020040C69003E4698 /* StatusAPICall.swift in Sources */,
+				C885177020040C69003E4698 /* EquipmentsStatusAPICall.swift in Sources */,
 				C885177220040F84003E4698 /* EquipmentItem.swift in Sources */,
 				C856BACB1F362ADF007ABC26 /* ControlsViewController.swift in Sources */,
 				C856BAC91F362ADF007ABC26 /* AppDelegate.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  StatusAPICall.swift
+//  EquipmentsStatusAPICall.swift
 //  Pi Companion
 //
 //  Created by SwG Ghosh on 09/01/18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class StatusAPICall: APICall {
+class EquipmentsStatusAPICall: APICall {
     
     var equipments: [EquipmentItem]
     
@@ -17,14 +17,13 @@ class StatusAPICall: APICall {
         super.init(urlString: urlString, apiKey: apiKey)
     }
     
-    func getEquipmentsStatus() -> [EquipmentItem] {
+    func getEquipments() -> [EquipmentItem] {
         do {
             let json = try JSONSerialization.jsonObject(with: jsonData!, options: JSONSerialization.ReadingOptions()) as! [String: Any]
             let list = json["result"] as! [String: String]
             
             for (key, value) in list {
-                let status: Bool = value.elementsEqual("high")
-                equipments.append(EquipmentItem(identifier: key.first!, status: status))
+                equipments.append(EquipmentItem(channelIdentifier: key.first!, channelPowerStatus: value.elementsEqual("high")))
             }
             
         }

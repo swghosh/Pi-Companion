@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ControlsViewController.swift
 //  Pi Companion
 //
 //  Created by SwG Ghosh on 05/08/17.
@@ -15,18 +15,20 @@ class ControlsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     var equipments: [EquipmentItem] = [EquipmentItem]()
     
-    var channelNames: [Character: String] = [
+    var applianceNames: [Character: String] = [
         Character("A") : "Tubelight",
         Character("B") : "Table Lamp",
         Character("C") : "Fan",
         Character("D") : "Night Lamp"
     ]
 
-    func prepareTableData() {
+    func prepare() {
         
-        let apiCall = StatusAPICall(urlString: "http://192.168.43.195:2017/api/readstatus", apiKey: "Z9FpluAnv")
-        apiCall.asyncCompletionHandler = { () -> Void in
-            self.equipments = apiCall.getEquipmentsStatus()
+        self.activity.startAnimating()
+        
+        let apiCall = EquipmentsStatusAPICall(urlString: "http://192.168.43.195:2017/api/readstatus", apiKey: "Z9FpluAnv")
+        apiCall.onCompleteAsyncTask = { () -> Void in
+            self.equipments = apiCall.getEquipments()
             
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -45,8 +47,7 @@ class ControlsViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        activity.startAnimating()
-        prepareTableData()
+        prepare()
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,9 +72,9 @@ class ControlsViewController: UIViewController, UITableViewDataSource, UITableVi
         
         cell.linkedEquipment = equipments[indexPath.row]
         
-        cell.channelName.text = "\(channelNames[cell.linkedEquipment!.identifier]!)"
-        cell.channelDescription.text = "Remote control switching of the  channel \(equipments[indexPath.row].identifier) - \(channelNames[cell.linkedEquipment!.identifier]!). Switching proceeds by use of wireless network."
-        cell.channelSwitch.isOn = cell.linkedEquipment!.status
+        cell.channelName.text = "\(applianceNames[cell.linkedEquipment!.channelIdentifier]!)"
+        cell.channelDescription.text = "Remotely switch the power state of the appliance connected to channel \(cell.linkedEquipment!.channelPowerStatus). A \(applianceNames[cell.linkedEquipment!.channelIdentifier]!) is currently connected to this channel."
+        cell.channelSwitch.isOn = cell.linkedEquipment!.channelPowerStatus
         
         return cell
     }
