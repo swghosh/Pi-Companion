@@ -14,17 +14,5 @@ class SwitchTableViewCell: UITableViewCell {
     @IBOutlet weak var channelDescription: UILabel!
     @IBOutlet weak var channelSwitch: UISwitch!
     
-    var linkedEquipment: EquipmentItem?
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    weak var linkedEquipment: EquipmentItem?
 }

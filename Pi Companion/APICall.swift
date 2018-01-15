@@ -14,6 +14,7 @@ class APICall {
     var finished: Bool = false
     
     var onCompleteAsyncTask: (() -> Void)?
+    var onErrorAsyncTask: (() -> Void)?
     
     init(urlString: String, apiKey: String) {
         self.url = URL(string: "\(urlString)?key=\(apiKey)")
@@ -27,12 +28,20 @@ class APICall {
         
         apiRequest.httpMethod = "GET"
         
-        let apiTask = sharedSession.dataTask(with: apiRequest, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
+        let apiTask = sharedSession.dataTask(with: apiRequest, completionHandler: { [unowned self] (data: Data?, response: URLResponse?, error: Error?) -> Void in
             
-            self.jsonData = data
-            self.finished = true
+            if error != nil {
+                print(error!)
+                
+                self.onErrorAsyncTask?()
+            }
+                
+            else {
+                self.jsonData = data
+                self.finished = true
             
-            self.onCompleteAsyncTask?()
+                self.onCompleteAsyncTask?()
+            }
         })
         apiTask.resume()
     }

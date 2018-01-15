@@ -29,6 +29,16 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C889AF54200A4B2800574FC3"
+               BuildableName = "Pi Companion Tests.xctest"
+               BlueprintName = "Pi Companion Tests"
+               ReferencedContainer = "container:Pi Companion.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

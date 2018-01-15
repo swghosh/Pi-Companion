@@ -20,9 +20,9 @@ class EquipmentsStatusAPICall: APICall {
     func getEquipments() -> [EquipmentItem] {
         do {
             let json = try JSONSerialization.jsonObject(with: jsonData!, options: JSONSerialization.ReadingOptions()) as! [String: Any]
-            let list = json["result"] as! [String: String]
+            let dict = json["result"] as! [String: String]
             
-            for (key, value) in list {
+            for (key, value) in dict {
                 equipments.append(EquipmentItem(channelIdentifier: key.first!, channelPowerStatus: value.elementsEqual("high")))
             }
             

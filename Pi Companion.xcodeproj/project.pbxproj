@@ -14,9 +14,20 @@
 		C856BAD31F362ADF007ABC26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C856BAD11F362ADF007ABC26 /* LaunchScreen.storyboard */; };
 		C885177020040C69003E4698 /* EquipmentsStatusAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C885176F20040C69003E4698 /* EquipmentsStatusAPICall.swift */; };
 		C885177220040F84003E4698 /* EquipmentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C885177120040F84003E4698 /* EquipmentItem.swift */; };
+		C889AF58200A4B2800574FC3 /* Pi_Companion_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C889AF57200A4B2800574FC3 /* Pi_Companion_Tests.swift */; };
 		C8C0FE911F36FBD500734924 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C0FE901F36FBD500734924 /* SwitchTableViewCell.swift */; };
 		C8EA3FCC1FFFFDC1007B6A8E /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EA3FCB1FFFFDC1007B6A8E /* APICall.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C889AF5A200A4B2800574FC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C856BABD1F362ADE007ABC26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C856BAC41F362ADF007ABC26;
+			remoteInfo = "Pi Companion";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C856BAC51F362ADF007ABC26 /* Pi Companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pi Companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,12 +39,22 @@
 		C856BAD41F362ADF007ABC26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C885176F20040C69003E4698 /* EquipmentsStatusAPICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentsStatusAPICall.swift; sourceTree = "<group>"; };
 		C885177120040F84003E4698 /* EquipmentItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentItem.swift; sourceTree = "<group>"; };
+		C889AF55200A4B2800574FC3 /* Pi Companion Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pi Companion Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C889AF57200A4B2800574FC3 /* Pi_Companion_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pi_Companion_Tests.swift; sourceTree = "<group>"; };
+		C889AF59200A4B2800574FC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8C0FE901F36FBD500734924 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		C8EA3FCB1FFFFDC1007B6A8E /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C856BAC21F362ADF007ABC26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C889AF52200A4B2800574FC3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -47,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				C856BAC71F362ADF007ABC26 /* Pi Companion */,
+				C889AF56200A4B2800574FC3 /* Pi Companion Tests */,
 				C856BAC61F362ADF007ABC26 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				C856BAC51F362ADF007ABC26 /* Pi Companion.app */,
+				C889AF55200A4B2800574FC3 /* Pi Companion Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,6 +97,15 @@
 				C856BAD41F362ADF007ABC26 /* Info.plist */,
 			);
 			path = "Pi Companion";
+			sourceTree = "<group>";
+		};
+		C889AF56200A4B2800574FC3 /* Pi Companion Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C889AF57200A4B2800574FC3 /* Pi_Companion_Tests.swift */,
+				C889AF59200A4B2800574FC3 /* Info.plist */,
+			);
+			path = "Pi Companion Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,13 +128,31 @@
 			productReference = C856BAC51F362ADF007ABC26 /* Pi Companion.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C889AF54200A4B2800574FC3 /* Pi Companion Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C889AF5C200A4B2800574FC3 /* Build configuration list for PBXNativeTarget "Pi Companion Tests" */;
+			buildPhases = (
+				C889AF51200A4B2800574FC3 /* Sources */,
+				C889AF52200A4B2800574FC3 /* Frameworks */,
+				C889AF53200A4B2800574FC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C889AF5B200A4B2800574FC3 /* PBXTargetDependency */,
+			);
+			name = "Pi Companion Tests";
+			productName = "Pi Companion Tests";
+			productReference = C889AF55200A4B2800574FC3 /* Pi Companion Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		C856BABD1F362ADE007ABC26 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "SwG Ghosh";
 				TargetAttributes = {
@@ -111,6 +161,12 @@
 						DevelopmentTeam = 687NW7TG3Z;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
+					};
+					C889AF54200A4B2800574FC3 = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = 687NW7TG3Z;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C856BAC41F362ADF007ABC26;
 					};
 				};
 			};
@@ -128,6 +184,7 @@
 			projectRoot = "";
 			targets = (
 				C856BAC41F362ADF007ABC26 /* Pi Companion */,
+				C889AF54200A4B2800574FC3 /* Pi Companion Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -140,6 +197,13 @@
 				C856BAD31F362ADF007ABC26 /* LaunchScreen.storyboard in Resources */,
 				C856BAD01F362ADF007ABC26 /* Assets.xcassets in Resources */,
 				C856BACE1F362ADF007ABC26 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C889AF53200A4B2800574FC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,7 +223,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C889AF51200A4B2800574FC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C889AF58200A4B2800574FC3 /* Pi_Companion_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C889AF5B200A4B2800574FC3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C856BAC41F362ADF007ABC26 /* Pi Companion */;
+			targetProxy = C889AF5A200A4B2800574FC3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C856BACC1F362ADF007ABC26 /* Main.storyboard */ = {
@@ -318,6 +398,48 @@
 			};
 			name = Release;
 		};
+		C889AF5D200A4B2800574FC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 687NW7TG3Z;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Pi Companion Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cf.codecrafts.Pi-Companion-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pi Companion.app/Pi Companion";
+			};
+			name = Debug;
+		};
+		C889AF5E200A4B2800574FC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 687NW7TG3Z;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Pi Companion Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cf.codecrafts.Pi-Companion-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pi Companion.app/Pi Companion";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -335,6 +457,15 @@
 			buildConfigurations = (
 				C856BAD81F362ADF007ABC26 /* Debug */,
 				C856BAD91F362ADF007ABC26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C889AF5C200A4B2800574FC3 /* Build configuration list for PBXNativeTarget "Pi Companion Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C889AF5D200A4B2800574FC3 /* Debug */,
+				C889AF5E200A4B2800574FC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
