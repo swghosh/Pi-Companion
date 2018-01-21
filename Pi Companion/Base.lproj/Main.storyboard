@@ -39,8 +39,11 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8JI-X8-LyK">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8JI-X8-LyK" customClass="PowerStateControlSwitch" customModule="Pi_Companion" customModuleProvider="target">
                                                     <rect key="frame" x="294" y="27" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="controlSwitchChanged:" destination="vWN-Qf-9IQ" eventType="valueChanged" id="kQC-iW-b3L"/>
+                                                    </connections>
                                                 </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Remote control switching of the appliance. Switching proceeds by use of network." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dS1-FC-LQX">
                                                     <rect key="frame" x="27" y="38.5" width="248" height="25.5"/>
@@ -137,7 +140,7 @@
         <!--Preferences-->
         <scene sceneID="Ile-SU-DhP">
             <objects>
-                <viewController id="GFg-fL-7FM" customClass="ViewController" customModule="Pi_Companion" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GFg-fL-7FM" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nWB-FP-Kbq"/>
                         <viewControllerLayoutGuide type="bottom" id="dWs-Gf-PiO"/>

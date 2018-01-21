@@ -20,15 +20,13 @@ class APICall {
         self.url = URL(string: "\(urlString)?key=\(apiKey)")
     }
     
-    var time: String?
-    
     func performApiCall() {
         var apiRequest = URLRequest(url: url!)
         let sharedSession = URLSession.shared
         
         apiRequest.httpMethod = "GET"
         
-        let apiTask = sharedSession.dataTask(with: apiRequest, completionHandler: { [unowned self] (data: Data?, response: URLResponse?, error: Error?) -> Void in
+        let apiTask = sharedSession.dataTask(with: apiRequest, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
             
             if error != nil {
                 print(error!)

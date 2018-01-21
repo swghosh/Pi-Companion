@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C84ABBFD20138F37001CC7F0 /* EquipmentSwitchAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84ABBFC20138F37001CC7F0 /* EquipmentSwitchAPICall.swift */; };
 		C856BAC91F362ADF007ABC26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C856BAC81F362ADF007ABC26 /* AppDelegate.swift */; };
 		C856BACB1F362ADF007ABC26 /* ControlsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C856BACA1F362ADF007ABC26 /* ControlsViewController.swift */; };
 		C856BACE1F362ADF007ABC26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C856BACC1F362ADF007ABC26 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 		C885177020040C69003E4698 /* EquipmentsStatusAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C885176F20040C69003E4698 /* EquipmentsStatusAPICall.swift */; };
 		C885177220040F84003E4698 /* EquipmentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C885177120040F84003E4698 /* EquipmentItem.swift */; };
 		C889AF58200A4B2800574FC3 /* Pi_Companion_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C889AF57200A4B2800574FC3 /* Pi_Companion_Tests.swift */; };
+		C8A3A24E20148884001C672C /* PowerStateControlSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A3A24D20148884001C672C /* PowerStateControlSwitch.swift */; };
 		C8C0FE911F36FBD500734924 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C0FE901F36FBD500734924 /* SwitchTableViewCell.swift */; };
 		C8EA3FCC1FFFFDC1007B6A8E /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EA3FCB1FFFFDC1007B6A8E /* APICall.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C84ABBFC20138F37001CC7F0 /* EquipmentSwitchAPICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentSwitchAPICall.swift; sourceTree = "<group>"; };
 		C856BAC51F362ADF007ABC26 /* Pi Companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pi Companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C856BAC81F362ADF007ABC26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C856BACA1F362ADF007ABC26 /* ControlsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +45,7 @@
 		C889AF55200A4B2800574FC3 /* Pi Companion Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pi Companion Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C889AF57200A4B2800574FC3 /* Pi_Companion_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pi_Companion_Tests.swift; sourceTree = "<group>"; };
 		C889AF59200A4B2800574FC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8A3A24D20148884001C672C /* PowerStateControlSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerStateControlSwitch.swift; sourceTree = "<group>"; };
 		C8C0FE901F36FBD500734924 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		C8EA3FCB1FFFFDC1007B6A8E /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,15 +89,17 @@
 		C856BAC71F362ADF007ABC26 /* Pi Companion */ = {
 			isa = PBXGroup;
 			children = (
-				C856BAC81F362ADF007ABC26 /* AppDelegate.swift */,
 				C856BACA1F362ADF007ABC26 /* ControlsViewController.swift */,
-				C856BACC1F362ADF007ABC26 /* Main.storyboard */,
-				C885176F20040C69003E4698 /* EquipmentsStatusAPICall.swift */,
+				C8A3A24D20148884001C672C /* PowerStateControlSwitch.swift */,
 				C8EA3FCB1FFFFDC1007B6A8E /* APICall.swift */,
+				C885176F20040C69003E4698 /* EquipmentsStatusAPICall.swift */,
+				C84ABBFC20138F37001CC7F0 /* EquipmentSwitchAPICall.swift */,
 				C885177120040F84003E4698 /* EquipmentItem.swift */,
 				C8C0FE901F36FBD500734924 /* SwitchTableViewCell.swift */,
-				C856BACF1F362ADF007ABC26 /* Assets.xcassets */,
+				C856BACC1F362ADF007ABC26 /* Main.storyboard */,
 				C856BAD11F362ADF007ABC26 /* LaunchScreen.storyboard */,
+				C856BACF1F362ADF007ABC26 /* Assets.xcassets */,
+				C856BAC81F362ADF007ABC26 /* AppDelegate.swift */,
 				C856BAD41F362ADF007ABC26 /* Info.plist */,
 			);
 			path = "Pi Companion";
@@ -215,11 +221,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C885177020040C69003E4698 /* EquipmentsStatusAPICall.swift in Sources */,
+				C8A3A24E20148884001C672C /* PowerStateControlSwitch.swift in Sources */,
 				C885177220040F84003E4698 /* EquipmentItem.swift in Sources */,
 				C856BACB1F362ADF007ABC26 /* ControlsViewController.swift in Sources */,
 				C856BAC91F362ADF007ABC26 /* AppDelegate.swift in Sources */,
 				C8EA3FCC1FFFFDC1007B6A8E /* APICall.swift in Sources */,
 				C8C0FE911F36FBD500734924 /* SwitchTableViewCell.swift in Sources */,
+				C84ABBFD20138F37001CC7F0 /* EquipmentSwitchAPICall.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

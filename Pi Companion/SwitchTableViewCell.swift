@@ -12,7 +12,8 @@ class SwitchTableViewCell: UITableViewCell {
     
     @IBOutlet weak var channelName: UILabel!
     @IBOutlet weak var channelDescription: UILabel!
-    @IBOutlet weak var channelSwitch: UISwitch!
+    
+    @IBOutlet weak var channelSwitch: PowerStateControlSwitch!
     
     weak var linkedEquipment: EquipmentItem?
 }

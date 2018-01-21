@@ -10,6 +10,12 @@ import UIKit
 
 class ControlsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    let equipmentsStatusApiCallUrlString = "http://192.168.43.195:2017/api/readstatus"
+    let equipmentSwitchOnApiCallUrlString = "http://192.168.43.195:2017/api/sethigh"
+    let equipmentSwitchOffApiCallUrlString = "http://192.168.43.195:2017/api/setlow"
+    
+    let apiKey = "Z9FpluAnv"
+    
     // MARK : Storyboard Outlets
     @IBOutlet weak var activity: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
@@ -30,7 +36,7 @@ class ControlsViewController: UIViewController, UITableViewDataSource, UITableVi
         
         self.activity.startAnimating()
         
-        let apiCall = EquipmentsStatusAPICall(urlString: "http://192.168.43.195:2017/api/readstatus", apiKey: "Z9FpluAnv")
+        let apiCall = EquipmentsStatusAPICall(urlString: equipmentsStatusApiCallUrlString, apiKey: apiKey)
         apiCall.onCompleteAsyncTask = { [unowned self] () -> Void in
             self.equipments = apiCall.getEquipments()
             
@@ -53,6 +59,12 @@ class ControlsViewController: UIViewController, UITableViewDataSource, UITableVi
     func networkIssue() {
         let netAlertController = UIAlertController(title: "Network Issue", message: "Pi Companion is not being able to communicate with the Pi Server. Please ensure that the Pi is switched on, is running the relay server program and is connected to the same network as with this device.", preferredStyle: .alert)
         netAlertController.addAction(UIAlertAction(title: "Okay, I'll just check!", style: .default, handler: nil))
+        self.present(netAlertController, animated: true, completion: nil)
+    }
+    
+    func switchIssue() {
+        let netAlertController = UIAlertController(title: "Issue", message: "Pi Companion could not switch the power state due to miscommunication with Pi Server. You can give it another try.", preferredStyle: .alert)
+        netAlertController.addAction(UIAlertAction(title: "Okay!", style: .default, handler: nil))
         self.present(netAlertController, animated: true, completion: nil)
     }
     
@@ -97,12 +109,49 @@ class ControlsViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.channelDescription.text = "Remotely switch the power state of the appliance connected to channel \(cell.linkedEquipment!.channelPowerStatus). \(applianceNames[cell.linkedEquipment!.channelIdentifier]!) is currently connected to this channel."
         cell.channelSwitch.isOn = cell.linkedEquipment!.channelPowerStatus
         
+        cell.channelSwitch.channelIdentifier = cell.linkedEquipment!.channelIdentifier
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         tableView.estimatedRowHeight = 85.0
         return UITableViewAutomaticDimension
+    }
+    
+    @IBAction func controlSwitchChanged(_ sender: Any) {
+        let channelSwitch = sender as! PowerStateControlSwitch
+        let channelIdentifier = channelSwitch.channelIdentifier!
+        let channelPowerStatus = channelSwitch.isOn
+        
+        var apiCall: EquipmentSwitchAPICall
+        
+        let completed = { [unowned self] () -> Void in
+            
+            DispatchQueue.main.async(execute: { [unowned self] () -> Void in
+                self.prepare()
+            })
+        }
+        
+        let issued = { [unowned self] () -> Void in
+            
+            DispatchQueue.main.async(execute: { [unowned self] () -> Void in
+                self.switchIssue()
+            })
+        }
+        
+        if(channelPowerStatus) {
+            apiCall = EquipmentSwitchAPICall(urlString: equipmentSwitchOnApiCallUrlString, apiKey: apiKey, channelIdentifier: channelIdentifier)
+            apiCall.onCompleteAsyncTask = completed
+            apiCall.onErrorAsyncTask = issued
+            apiCall.performApiCall()
+        }
+        else {
+            apiCall = EquipmentSwitchAPICall(urlString: equipmentSwitchOffApiCallUrlString, apiKey: apiKey, channelIdentifier: channelIdentifier)
+            apiCall.onCompleteAsyncTask = completed
+            apiCall.onErrorAsyncTask = issued
+            apiCall.performApiCall()
+        }
     }
 }
 
