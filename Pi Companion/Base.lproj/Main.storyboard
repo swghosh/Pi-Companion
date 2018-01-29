@@ -140,7 +140,7 @@
         <!--Preferences-->
         <scene sceneID="Ile-SU-DhP">
             <objects>
-                <viewController id="GFg-fL-7FM" sceneMemberID="viewController">
+                <viewController id="GFg-fL-7FM" customClass="PreferencesViewController" customModule="Pi_Companion" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nWB-FP-Kbq"/>
                         <viewControllerLayoutGuide type="bottom" id="dWs-Gf-PiO"/>
@@ -197,6 +197,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOz-3c-RDB">
                                         <rect key="frame" x="170" y="202" width="34" height="30"/>
                                         <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="onPressSave:" destination="GFg-fL-7FM" eventType="touchUpInside" id="NFl-Fw-vfg"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Quy-qr-Or1">
                                         <rect key="frame" x="20" y="495" width="335" height="32"/>
@@ -244,6 +247,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" title="Preferences" image="SettingsIcon" id="Ls5-ET-4zw"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="controlServerAddressTextField" destination="eLl-zf-bgT" id="f1Q-g6-8al"/>
+                        <outlet property="controlServerPortTextField" destination="apm-YL-gNh" id="n2U-d4-GOW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SaM-e8-qTV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

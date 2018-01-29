@@ -8,40 +8,45 @@
 
 import Foundation
 
-class ServerPreferences: NSCoder {
+class ServerPreferences: Codable {
     
-    static let SaveFileURL = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("ServerPreferences")
-    
-    static func save(srvPref: ServerPreferences) -> Bool {
-        return NSKeyedArchiver.archiveRootObject(srvPref, toFile: SaveFileURL.path)
-    }
-    
-    static func load() -> ServerPreferences? {
-        return NSKeyedUnarchiver.unarchiveObject(withFile: SaveFileURL.path) as? ServerPreferences
-    }
-    
-    var piServerAddress: String?
-    var piServerPort: Int?
-    
+    var piServerAddress: String
+    var piServerPort: Int
+
     init(piServerAddress: String, piServerPort: Int) {
         self.piServerAddress = piServerAddress
         self.piServerPort = piServerPort
     }
     
-    required convenience init?(coder aDecoder: NSCoder) {
-        guard let port = aDecoder.decodeObject(forKey: "Port") as? Int
-            else {
-                    return nil
+    static let JSONFileURL = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("serverpreferences.json")
+    
+    static func saveServerPreferences(serverPreferences: ServerPreferences) {
+        // encode data
+        let jsonEncoder = JSONEncoder()
+        do {
+            let jsonData = try jsonEncoder.encode(serverPreferences)
+            // write to file
+            try String(data: jsonData, encoding: .utf8)?.write(to: JSONFileURL, atomically: true, encoding: .utf8)
         }
-        guard let address = aDecoder.decodeObject(forKey: "Address") as? String
-            else {
-                return nil
+        catch {
+            return
         }
-        self.init(piServerAddress: address, piServerPort: port)
     }
     
-    func encode(with aCoder: NSCoder) {
-        aCoder.encode(self.piServerPort!, forKey: "Port")
-        aCoder.encode(self.piServerAddress!, forKey: "Address")
+    static func loadServerPreferences() -> ServerPreferences? {
+        do {
+            // read from file
+            let jsonString = try String(contentsOf: JSONFileURL)
+            let jsonData = jsonString.data(using: .utf8)
+            // decode data
+            let jsonDecoder = JSONDecoder()
+            return try
+                jsonDecoder.decode(ServerPreferences.self, from: jsonData!)
+        }
+        catch {
+            return nil
+        }
+        
     }
+    
 }

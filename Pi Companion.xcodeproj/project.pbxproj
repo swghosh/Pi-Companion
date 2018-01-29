@@ -13,6 +13,7 @@
 		C856BACE1F362ADF007ABC26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C856BACC1F362ADF007ABC26 /* Main.storyboard */; };
 		C856BAD01F362ADF007ABC26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C856BACF1F362ADF007ABC26 /* Assets.xcassets */; };
 		C856BAD31F362ADF007ABC26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C856BAD11F362ADF007ABC26 /* LaunchScreen.storyboard */; };
+		C861AACF201F607100D5C8E6 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C861AACE201F607100D5C8E6 /* PreferencesViewController.swift */; };
 		C885177020040C69003E4698 /* EquipmentsStatusAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C885176F20040C69003E4698 /* EquipmentsStatusAPICall.swift */; };
 		C885177220040F84003E4698 /* EquipmentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C885177120040F84003E4698 /* EquipmentItem.swift */; };
 		C8A3A24E20148884001C672C /* PowerStateControlSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A3A24D20148884001C672C /* PowerStateControlSwitch.swift */; };
@@ -30,6 +31,7 @@
 		C856BACF1F362ADF007ABC26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C856BAD21F362ADF007ABC26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C856BAD41F362ADF007ABC26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C861AACE201F607100D5C8E6 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		C885176F20040C69003E4698 /* EquipmentsStatusAPICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentsStatusAPICall.swift; sourceTree = "<group>"; };
 		C885177120040F84003E4698 /* EquipmentItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentItem.swift; sourceTree = "<group>"; };
 		C8A3A24D20148884001C672C /* PowerStateControlSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerStateControlSwitch.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				C885177120040F84003E4698 /* EquipmentItem.swift */,
 				C8C0FE901F36FBD500734924 /* SwitchTableViewCell.swift */,
 				C856BACC1F362ADF007ABC26 /* Main.storyboard */,
+				C861AACE201F607100D5C8E6 /* PreferencesViewController.swift */,
 				C8DF88B32018598800576264 /* ServerPreferences.swift */,
 				C856BAD11F362ADF007ABC26 /* LaunchScreen.storyboard */,
 				C856BACF1F362ADF007ABC26 /* Assets.xcassets */,
@@ -164,6 +167,7 @@
 				C885177220040F84003E4698 /* EquipmentItem.swift in Sources */,
 				C856BACB1F362ADF007ABC26 /* ControlsViewController.swift in Sources */,
 				C856BAC91F362ADF007ABC26 /* AppDelegate.swift in Sources */,
+				C861AACF201F607100D5C8E6 /* PreferencesViewController.swift in Sources */,
 				C8EA3FCC1FFFFDC1007B6A8E /* APICall.swift in Sources */,
 				C8C0FE911F36FBD500734924 /* SwitchTableViewCell.swift in Sources */,
 				C8DF88B42018598800576264 /* ServerPreferences.swift in Sources */,
