@@ -49,24 +49,16 @@ class ServerPreferences: Codable {
         
     }
     
+    static let piServerDefaultAddress = "raspberrypi.local"
+    static let piServerDefaultPort = 2017
+    
     static func getApiURLStrings() -> [String: String] {
         let serverPreferences = ServerPreferences.loadServerPreferences()
-        if(serverPreferences != nil) {
-            let urls = [
-                "status": "https://\(serverPreferences!.piServerAddress):\(serverPreferences!.piServerPort)/api/status",
-                "setlow": "https://\(serverPreferences!.piServerAddress):\(serverPreferences!.piServerPort)/api/setlow",
-                "sethigh": "https://\(serverPreferences!.piServerAddress):\(serverPreferences!.piServerPort)/api/sethigh"
-            ]
-            return urls
-        }
-        else {
-            let urls = [
-                "status": "https://swgrpi.local:2017/api/status",
-                "setlow": "https://swgrpi.local:2017/api/setlow",
-                "sethigh": "https://swgrpi.local:2017/api/sethigh"
-            ]
-            return urls
-        }
+        return [
+            "status": "https://\(serverPreferences?.piServerAddress ?? piServerDefaultAddress):\(serverPreferences?.piServerPort ?? piServerDefaultPort)/api/status",
+            "setlow": "https://\(serverPreferences?.piServerAddress ?? piServerDefaultAddress):\(serverPreferences?.piServerPort ?? piServerDefaultPort)/api/setlow",
+            "sethigh": "https://\(serverPreferences?.piServerAddress ?? piServerDefaultAddress):\(serverPreferences?.piServerPort ?? piServerDefaultPort)/api/sethigh"
+        ]
     }
     
 }
