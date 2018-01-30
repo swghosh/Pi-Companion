@@ -71,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				C856BACA1F362ADF007ABC26 /* ControlsViewController.swift */,
+				C861AACE201F607100D5C8E6 /* PreferencesViewController.swift */,
 				C8A3A24D20148884001C672C /* PowerStateControlSwitch.swift */,
 				C8EA3FCB1FFFFDC1007B6A8E /* APICall.swift */,
 				C885176F20040C69003E4698 /* EquipmentsStatusAPICall.swift */,
@@ -78,7 +79,6 @@
 				C885177120040F84003E4698 /* EquipmentItem.swift */,
 				C8C0FE901F36FBD500734924 /* SwitchTableViewCell.swift */,
 				C856BACC1F362ADF007ABC26 /* Main.storyboard */,
-				C861AACE201F607100D5C8E6 /* PreferencesViewController.swift */,
 				C8DF88B32018598800576264 /* ServerPreferences.swift */,
 				C856BAD11F362ADF007ABC26 /* LaunchScreen.storyboard */,
 				C856BACF1F362ADF007ABC26 /* Assets.xcassets */,

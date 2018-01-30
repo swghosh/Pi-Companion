@@ -100,7 +100,7 @@ class ControlsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Equipments / Appliances"
+        return (equipments.count != 0) ? "Equipments / Appliances" : ""
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -155,6 +155,10 @@ class ControlsViewController: UIViewController, UITableViewDataSource, UITableVi
             apiCall.onErrorAsyncTask = issued
             apiCall.performApiCall()
         }
+    }
+    
+    @IBAction func onPressReload(_ sender: Any) {
+        self.viewDidAppear(true)
     }
 }
 

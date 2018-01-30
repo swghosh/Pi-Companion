@@ -92,12 +92,21 @@
                                 <rect key="frame" x="169" y="315" width="37" height="37"/>
                                 <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKg-ow-M23">
+                                <rect key="frame" x="325" y="20" width="30" height="30"/>
+                                <state key="normal" title="🔄"/>
+                                <connections>
+                                    <action selector="onPressReload:" destination="vWN-Qf-9IQ" eventType="touchUpInside" id="Xwd-IO-2Lc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.35659420219999999" green="0.62626051490000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="IKg-ow-M23" secondAttribute="trailing" constant="20" id="14J-HQ-EQm"/>
                             <constraint firstItem="xpl-nf-Lhw" firstAttribute="top" secondItem="TZC-iP-eIS" secondAttribute="bottom" constant="10" id="3ik-9m-00k"/>
                             <constraint firstItem="TZC-iP-eIS" firstAttribute="top" secondItem="Qwh-dn-A5I" secondAttribute="bottom" constant="-1" id="Fx8-SF-dbT"/>
                             <constraint firstItem="mhp-b9-ASX" firstAttribute="top" secondItem="xpl-nf-Lhw" secondAttribute="bottom" id="Qic-St-XEF"/>
+                            <constraint firstItem="IKg-ow-M23" firstAttribute="top" secondItem="69B-op-r11" secondAttribute="bottom" id="Soh-oS-KQP"/>
                             <constraint firstItem="Qwh-dn-A5I" firstAttribute="top" secondItem="69B-op-r11" secondAttribute="bottom" constant="5" id="aED-XM-O0M"/>
                             <constraint firstItem="u5M-cl-0PK" firstAttribute="centerY" secondItem="mO5-7g-Ltb" secondAttribute="centerY" id="gjh-zR-DxJ"/>
                             <constraint firstItem="TZC-iP-eIS" firstAttribute="centerX" secondItem="mO5-7g-Ltb" secondAttribute="centerX" id="m9b-xt-9hq"/>
