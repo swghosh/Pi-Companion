@@ -10,15 +10,12 @@ import UIKit
 
 class ControlsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    let equipmentsStatusApiCallUrlString = "http://192.168.43.195:2017/api/readstatus"
-    let equipmentSwitchOnApiCallUrlString = "http://192.168.43.195:2017/api/sethigh"
-    let equipmentSwitchOffApiCallUrlString = "http://192.168.43.195:2017/api/setlow"
-    
     let apiKey = "Z9FpluAnv"
     
     // MARK : Storyboard Outlets
     @IBOutlet weak var activity: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var serverLabel: UILabel!
     
     // MARK : Model Items
     var equipments: [EquipmentItem] = [EquipmentItem]()
@@ -36,7 +33,7 @@ class ControlsViewController: UIViewController, UITableViewDataSource, UITableVi
         
         self.activity.startAnimating()
         
-        let apiCall = EquipmentsStatusAPICall(urlString: equipmentsStatusApiCallUrlString, apiKey: apiKey)
+        let apiCall = EquipmentsStatusAPICall(urlString: ServerPreferences.getApiURLStrings()["status"]!, apiKey: apiKey)
         apiCall.onCompleteAsyncTask = { [unowned self] () -> Void in
             self.equipments = apiCall.getEquipments()
             
@@ -77,6 +74,11 @@ class ControlsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        let serverPreferences = ServerPreferences.loadServerPreferences()
+        if(serverPreferences != nil) {
+            serverLabel.text = "\(serverPreferences!.piServerAddress):\(serverPreferences!.piServerPort)"
+        }
         
         prepare()
     }
@@ -141,13 +143,13 @@ class ControlsViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         
         if(channelPowerStatus) {
-            apiCall = EquipmentSwitchAPICall(urlString: equipmentSwitchOnApiCallUrlString, apiKey: apiKey, channelIdentifier: channelIdentifier)
+            apiCall = EquipmentSwitchAPICall(urlString: ServerPreferences.getApiURLStrings()["setlow"]!, apiKey: apiKey, channelIdentifier: channelIdentifier)
             apiCall.onCompleteAsyncTask = completed
             apiCall.onErrorAsyncTask = issued
             apiCall.performApiCall()
         }
         else {
-            apiCall = EquipmentSwitchAPICall(urlString: equipmentSwitchOffApiCallUrlString, apiKey: apiKey, channelIdentifier: channelIdentifier)
+            apiCall = EquipmentSwitchAPICall(urlString: ServerPreferences.getApiURLStrings()["sethigh"]!, apiKey: apiKey, channelIdentifier: channelIdentifier)
             apiCall.onCompleteAsyncTask = completed
             apiCall.onErrorAsyncTask = issued
             apiCall.performApiCall()

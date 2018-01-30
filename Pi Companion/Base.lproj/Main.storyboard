@@ -76,8 +76,8 @@
                                     <outlet property="delegate" destination="vWN-Qf-9IQ" id="ekn-0X-REu"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connected to server at 192.168.43.195 port 2017." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZC-iP-eIS">
-                                <rect key="frame" x="28" y="44.5" width="319.5" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="someserver.tld:port" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZC-iP-eIS">
+                                <rect key="frame" x="124.5" y="44.5" width="126.5" height="17"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -111,6 +111,7 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="activity" destination="u5M-cl-0PK" id="bIv-2A-3Mu"/>
+                        <outlet property="serverLabel" destination="TZC-iP-eIS" id="pH3-DJ-wHX"/>
                         <outlet property="tableView" destination="xpl-nf-Lhw" id="0ls-Uo-LiT"/>
                     </connections>
                 </viewController>
