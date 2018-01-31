@@ -109,7 +109,7 @@ class ControlsViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.linkedEquipment = equipments[indexPath.row]
         
         cell.channelName.text = "\(applianceNames[cell.linkedEquipment!.channelIdentifier]!)"
-        cell.channelDescription.text = "Remotely switch the power state of the appliance connected to channel \(cell.linkedEquipment!.channelPowerStatus). \(applianceNames[cell.linkedEquipment!.channelIdentifier]!) is currently connected to this channel."
+        cell.channelDescription.text = "Remotely switch the power state of the appliance connected to channel \(cell.linkedEquipment!.channelIdentifier). \(applianceNames[cell.linkedEquipment!.channelIdentifier]!) is currently connected to this channel."
         cell.channelSwitch.isOn = cell.linkedEquipment!.channelPowerStatus
         
         cell.channelSwitch.channelIdentifier = cell.linkedEquipment!.channelIdentifier
