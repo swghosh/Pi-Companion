@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C822FFA22022430C00BE1953 /* StopServerAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C822FFA12022430C00BE1953 /* StopServerAPICall.swift */; };
 		C84ABBFD20138F37001CC7F0 /* EquipmentSwitchAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84ABBFC20138F37001CC7F0 /* EquipmentSwitchAPICall.swift */; };
 		C856BAC91F362ADF007ABC26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C856BAC81F362ADF007ABC26 /* AppDelegate.swift */; };
 		C856BACB1F362ADF007ABC26 /* ControlsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C856BACA1F362ADF007ABC26 /* ControlsViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C822FFA12022430C00BE1953 /* StopServerAPICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopServerAPICall.swift; sourceTree = "<group>"; };
 		C84ABBFC20138F37001CC7F0 /* EquipmentSwitchAPICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentSwitchAPICall.swift; sourceTree = "<group>"; };
 		C856BAC51F362ADF007ABC26 /* Pi Companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pi Companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C856BAC81F362ADF007ABC26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,10 +78,11 @@
 				C8EA3FCB1FFFFDC1007B6A8E /* APICall.swift */,
 				C885176F20040C69003E4698 /* EquipmentsStatusAPICall.swift */,
 				C84ABBFC20138F37001CC7F0 /* EquipmentSwitchAPICall.swift */,
+				C822FFA12022430C00BE1953 /* StopServerAPICall.swift */,
 				C885177120040F84003E4698 /* EquipmentItem.swift */,
+				C8DF88B32018598800576264 /* ServerPreferences.swift */,
 				C8C0FE901F36FBD500734924 /* SwitchTableViewCell.swift */,
 				C856BACC1F362ADF007ABC26 /* Main.storyboard */,
-				C8DF88B32018598800576264 /* ServerPreferences.swift */,
 				C856BAD11F362ADF007ABC26 /* LaunchScreen.storyboard */,
 				C856BACF1F362ADF007ABC26 /* Assets.xcassets */,
 				C856BAC81F362ADF007ABC26 /* AppDelegate.swift */,
@@ -171,6 +174,7 @@
 				C8EA3FCC1FFFFDC1007B6A8E /* APICall.swift in Sources */,
 				C8C0FE911F36FBD500734924 /* SwitchTableViewCell.swift in Sources */,
 				C8DF88B42018598800576264 /* ServerPreferences.swift in Sources */,
+				C822FFA22022430C00BE1953 /* StopServerAPICall.swift in Sources */,
 				C84ABBFD20138F37001CC7F0 /* EquipmentSwitchAPICall.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

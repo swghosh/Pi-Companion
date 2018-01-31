@@ -96,7 +96,7 @@
                                 <rect key="frame" x="325" y="20" width="30" height="30"/>
                                 <state key="normal" title="🔄"/>
                                 <connections>
-                                    <action selector="onPressReload:" destination="vWN-Qf-9IQ" eventType="touchUpInside" id="Xwd-IO-2Lc"/>
+                                    <action selector="pressReload:" destination="vWN-Qf-9IQ" eventType="touchUpInside" id="x7E-eM-s8V"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -208,7 +208,7 @@
                                         <rect key="frame" x="170" y="202" width="34" height="30"/>
                                         <state key="normal" title="Save"/>
                                         <connections>
-                                            <action selector="onPressSave:" destination="GFg-fL-7FM" eventType="touchUpInside" id="NFl-Fw-vfg"/>
+                                            <action selector="pressSave:" destination="GFg-fL-7FM" eventType="touchUpInside" id="gJB-Bm-gpv"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Quy-qr-Or1">
@@ -216,6 +216,9 @@
                                         <color key="backgroundColor" red="0.11681652288652059" green="0.32471167982281873" blue="0.48713118649999998" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title=" ✋🏻Stop Control Server "/>
+                                        <connections>
+                                            <action selector="pressStopServer:" destination="GFg-fL-7FM" eventType="touchUpInside" id="fmW-wt-fwu"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

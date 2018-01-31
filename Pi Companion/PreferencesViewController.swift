@@ -9,6 +9,9 @@
 import UIKit
 
 class PreferencesViewController: UIViewController {
+    
+    let apiKey = "Z9FpluAnv"
+    
     @IBOutlet weak var controlServerAddressTextField: UITextField!
     @IBOutlet weak var controlServerPortTextField: UITextField!
     
@@ -33,11 +36,17 @@ class PreferencesViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func onPressSave(_ sender: Any) {
+    @IBAction func pressSave(_ sender: Any) {
         print("File save path is \(ServerPreferences.JSONFileURL.path).")
         
         let serverPreferences = ServerPreferences(piServerAddress: controlServerAddressTextField.text!, piServerPort: Int(controlServerPortTextField.text!)!)
         ServerPreferences.saveServerPreferences(serverPreferences: serverPreferences)
+    }
+    
+    @IBAction func pressStopServer(_ sender: Any) {
+        
+        let apiCall = StopServerAPICall(urlString: ServerPreferences.getApiURLStrings()["exit"]!, apiKey: apiKey)
+        apiCall.performApiCall()
     }
 
     /*

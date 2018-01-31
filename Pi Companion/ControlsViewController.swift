@@ -34,7 +34,7 @@ class ControlsViewController: UIViewController, UITableViewDataSource, UITableVi
         
         self.activity.startAnimating()
         
-        let apiCall = EquipmentsStatusAPICall(urlString: apiUrlStrings!["status"]!, apiKey: apiKey)
+        let apiCall = EquipmentsStatusAPICall(urlString: apiUrlStrings!["readstatus"]!, apiKey: apiKey)
         apiCall.onCompleteAsyncTask = { [unowned self] () -> Void in
             self.equipments = apiCall.getEquipments()
             
@@ -157,8 +157,9 @@ class ControlsViewController: UIViewController, UITableViewDataSource, UITableVi
         }
     }
     
-    @IBAction func onPressReload(_ sender: Any) {
+    @IBAction func pressReload(_ sender: Any) {
         self.viewDidAppear(true)
     }
+    
 }
 

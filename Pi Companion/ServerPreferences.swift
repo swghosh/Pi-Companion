@@ -55,9 +55,10 @@ class ServerPreferences: Codable {
     static func getApiURLStrings() -> [String: String] {
         let serverPreferences = ServerPreferences.loadServerPreferences()
         return [
-            "status": "http://\(serverPreferences?.piServerAddress ?? piServerDefaultAddress):\(serverPreferences?.piServerPort ?? piServerDefaultPort)/api/readstatus",
+            "readstatus": "http://\(serverPreferences?.piServerAddress ?? piServerDefaultAddress):\(serverPreferences?.piServerPort ?? piServerDefaultPort)/api/readstatus",
             "setlow": "http://\(serverPreferences?.piServerAddress ?? piServerDefaultAddress):\(serverPreferences?.piServerPort ?? piServerDefaultPort)/api/setlow",
-            "sethigh": "http://\(serverPreferences?.piServerAddress ?? piServerDefaultAddress):\(serverPreferences?.piServerPort ?? piServerDefaultPort)/api/sethigh"
+            "sethigh": "http://\(serverPreferences?.piServerAddress ?? piServerDefaultAddress):\(serverPreferences?.piServerPort ?? piServerDefaultPort)/api/sethigh",
+            "exit": "http://\(serverPreferences?.piServerAddress ?? piServerDefaultAddress):\(serverPreferences?.piServerPort ?? piServerDefaultPort)/api/exit"
         ]
     }
     
