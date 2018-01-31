@@ -144,13 +144,13 @@ class ControlsViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         
         if(channelPowerStatus) {
-            apiCall = EquipmentSwitchAPICall(urlString: apiUrlStrings!["setlow"]!, apiKey: apiKey, channelIdentifier: channelIdentifier)
+            apiCall = EquipmentSwitchAPICall(urlString: apiUrlStrings!["sethigh"]!, apiKey: apiKey, channelIdentifier: channelIdentifier)
             apiCall.onCompleteAsyncTask = completed
             apiCall.onErrorAsyncTask = issued
             apiCall.performApiCall()
         }
         else {
-            apiCall = EquipmentSwitchAPICall(urlString: apiUrlStrings!["sethigh"]!, apiKey: apiKey, channelIdentifier: channelIdentifier)
+            apiCall = EquipmentSwitchAPICall(urlString: apiUrlStrings!["setlow"]!, apiKey: apiKey, channelIdentifier: channelIdentifier)
             apiCall.onCompleteAsyncTask = completed
             apiCall.onErrorAsyncTask = issued
             apiCall.performApiCall()
