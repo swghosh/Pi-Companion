@@ -22,10 +22,10 @@ class ControlsViewController: UIViewController, UITableViewDataSource, UITableVi
     var equipments: [EquipmentItem] = [EquipmentItem]()
     
     var applianceNames: [Character: String] = [
-        Character("A") : "Tubelight",
-        Character("B") : "Table Lamp",
-        Character("C") : "Fan",
-        Character("D") : "Night Lamp"
+        Character("A") : "Tubelight (r-o)",
+        Character("B") : "Fan (r-o)",
+        Character("C") : "prodDemo - LED",
+        Character("D") : "prod - Lamp"
     ]
 
     // MARK : Local Methods
