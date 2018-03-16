@@ -23,9 +23,9 @@ class ControlsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     var applianceNames: [Character: String] = [
         Character("A") : "Tubelight (r-o)",
-        Character("B") : "Fan (r-o)",
+        Character("B") : "prod - Lamp",
         Character("C") : "prodDemo - LED",
-        Character("D") : "prod - Lamp"
+        Character("D") : "Fan (r-o)"
     ]
 
     // MARK : Local Methods
